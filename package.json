@@ -18,7 +18,9 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "test": "jest",
+    "typecheck": "tsc --noEmit -p tsconfig.test.json"
   },
   "keywords": [
     "agewallet",
@@ -35,10 +37,10 @@
     "url": "https://github.com/agewallet/agewallet-react-native-sdk.git"
   },
   "peerDependencies": {
-    "react-native-keychain": "^8.0.0",
     "expo-crypto": "^12.0.0 || ^13.0.0 || ^14.0.0",
+    "expo-linking": "^6.0.0 || ^7.0.0 || ^8.0.0",
     "expo-web-browser": "^12.0.0 || ^13.0.0 || ^14.0.0",
-    "expo-linking": "^6.0.0 || ^7.0.0 || ^8.0.0"
+    "react-native-keychain": "^8.0.0"
   },
   "peerDependenciesMeta": {
     "expo-web-browser": {
@@ -55,11 +57,15 @@
     }
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.19.2",
     "@types/react-native": "^0.72.0",
-    "typescript": "^5.0.0",
     "expo-crypto": "^14.0.0",
-    "expo-web-browser": "^14.0.0",
     "expo-linking": "^7.0.0",
-    "react-native-keychain": "^8.2.0"
+    "expo-web-browser": "^14.0.0",
+    "jest": "^30.5.2",
+    "react-native-keychain": "^8.2.0",
+    "ts-jest": "^29.4.15",
+    "typescript": "^5.0.0"
   }
 }
